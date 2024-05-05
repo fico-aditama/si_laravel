@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        DB::unprepared('
+        CREATE TRIGGER clear_tem_pesan AFTER INSERT ON detail_pesan
+        FOR EACH ROW 
+        BEGIN
+            DELETE FROM temp_pemesanan;
+        END
+        ');   
     }
 
     /**
@@ -19,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        DB::unprepared('DROP TRIGGER clear_tem_pesan');
     }
 };

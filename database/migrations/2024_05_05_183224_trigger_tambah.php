@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        DB::unprepared('
+        CREATE TRIGGER update_stock after  INSERT ON detail_pembelian
+        FOR EACH ROW BEGIN
+            UPDATE barang
+                SET stok = stok + NEW.qty_beli
+            WHERE
+                kd_brg = NEW.kd_brg;
+        END
+    ');    
     }
 
     /**
@@ -19,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        DB::unprepared('DROP TRIGGER update_stock');
     }
 };

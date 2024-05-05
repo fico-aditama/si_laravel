@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detail_returs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        Schema::create('detail_retur', function (Blueprint $table) {
+            $table->string('no_retur',14);
+            $table->string('kd_brg',5);
+            $table->integer('qty_retur');
+            $table->integer('sub_retur');
+        });   
     }
 
     /**
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detail_returs');
+        Schema::dropIfExists('detail_retur');
     }
 };

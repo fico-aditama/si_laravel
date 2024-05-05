@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pembelians', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        Schema::create('pembelian', function (Blueprint $table) {
+            $table->string('no_beli',14)->primary();
+            $table->date('tgl_beli');
+            $table->string('no_faktur',14);
+            $table->integer('total_beli');
+            $table->string('no_pesan',14);
+        });    
     }
 
     /**
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pembelians');
+        Schema::dropIfExists('pembelian');
     }
 };
