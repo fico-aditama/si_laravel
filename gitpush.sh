@@ -1,6 +1,6 @@
 git init .
 git add .
-git commit -m "Implementasi SB Admin"
+git commit -m "17. Memecah Sidebar, Navbar, Footer"
 git branch -M main
 git remote add origin1 git@github.com:fico-aditama/si_laravel.git
 git push -u origin main
