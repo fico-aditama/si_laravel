@@ -55,6 +55,7 @@
             {{ __('Settings') }}
         </div>
 
+        @role('admin')
         <!-- Nav Item - Profile -->
         <li class="nav-item ">
             <a class="nav-link" >
@@ -62,6 +63,7 @@
                 <span>{{ __('Profile') }}</span>
             </a>
         </li>
+        @endrole
 
         <!-- Nav Item - About -->
         <li class="nav-item ">

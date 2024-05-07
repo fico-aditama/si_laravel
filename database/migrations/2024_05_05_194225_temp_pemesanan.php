@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         DB::unprepared('
-            CREATE VIEW temp_pesan AS
+            CREATE OR REPLACE  VIEW temp_pesan AS
             SELECT 
                 temp_pemesanan.kd_brg AS kd_brg, 
                 CONCAT(barang.nm_brg, barang.harga) AS nm_brg,
