@@ -1,6 +1,6 @@
 git init .
 git add .
-git commit -m "17. Memecah Sidebar, Navbar, Footer"
+git commit -m "18 - Sistem Infomasi Akuntansi dengan Laravel 10 - Form Master User"
 git branch -M main
 git remote add origin1 git@github.com:fico-aditama/si_laravel.git
 git push -u origin main
