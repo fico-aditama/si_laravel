@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
     <form action="{{route('barang.update', [$barang->kd_brg])}}" method="POST">
 

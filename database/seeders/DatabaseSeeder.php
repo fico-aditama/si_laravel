@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoleSeeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\SupplierSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,7 +25,10 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Barang::factory(500)->create();
 
+        \App\Models\Supplier::factory(500)->create();
+
         $this->call(RoleSeeder::class);
-        $this->call(UserSeeder::class);        
+        $this->call(UserSeeder::class);     
+        $this->call(SupplierSeeder::class);
     }
 }

@@ -47,6 +47,7 @@
             <!-- Main Content -->
             <div id="content">
 
+                <!-- Topbar -->
                 @if(Auth::check())
                 <!-- Topbar -->
                 @include('layouts.partials.navbar')

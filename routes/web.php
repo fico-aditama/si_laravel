@@ -8,7 +8,7 @@ use App\Http\Controllers\AkunController;
 use App\Http\Controllers\SettingController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
