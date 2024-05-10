@@ -48,6 +48,7 @@
             <span>{{ __('Master Supplier') }}</span>
         </a>
     </li>
+
     @endrole
 
 

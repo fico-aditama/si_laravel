@@ -6,9 +6,11 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\SettingController;
+use Illuminate\Support\Facades\View;
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return View::make('nextjs');
 });
 
 Auth::routes();
