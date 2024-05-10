@@ -39,9 +39,14 @@
                                 @endforeach
                             </td>
                             <td align="center">
+                                <!-- <button  data-toggle="modal" data-target="#modal-edit-user">
+                                    <i class="fas fa-edit fa-sm text-white-50"></i>Edit Akses
+                                </button> -->
+                                <div class="card-header py-3" align="right">
                                 <a href="{{route('user.edit' ,[$row->id])}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
                                     <i class="fas fa-edit fa-sm text-white-50"></i>Edit Akses
                                 </a>
+
                                 <a href="/user/hapus/{{ $row->id }}" onclick="return confirm('Yakin Ingin menghapus data?')" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
                                     <i class="fas fa-trash-alt fa-sm text-white-50"></i> Hapus
                                 </a>                               
@@ -78,10 +83,16 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-20 control-label">Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" name="password" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-lg-20 control-label">Role/Akses</label>
                         <div class="col-lg-10">
                         <select id="roles" name="roles" class="form-control" required>
-                            <option value="">--Pilih ROles--</option>
+                            <option value="">--Pilih Roles--</option>
                             <option value="admin">Admin</option>
                             <option value="user">User</option>
                         </select>

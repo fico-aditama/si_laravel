@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Barang extends Model
 {
     use HasFactory;
+    public $incrementing = false; // Master Barang
     public $timestamps = false;
     protected $table = 'barang';
+    protected $keyType = 'string';
 
     protected $fillable = [
         'kd_brg',

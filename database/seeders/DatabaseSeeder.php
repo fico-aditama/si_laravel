@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(1000)->create();
 
         \App\Models\User::factory()->create([
             'name' => 'Fiko Aditama',
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'password' => '12345678',
         ]);
 
-        \App\Models\Barang::factory(50)->create();
+        \App\Models\Barang::factory(500)->create();
 
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);        
