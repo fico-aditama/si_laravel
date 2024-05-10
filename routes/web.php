@@ -20,17 +20,17 @@ Route::get('/user/hapus/{id}', [UserController::class, 'destroy']);
 Route::resource('/user', UserController::class);
 
 // BarangController
-Route::get('/user/hapus/{id}', [BarangController::class, 'destroy']);
-Route::resource('/user', BarangController::class);
+Route::get('/barang/hapus/{id}', [BarangController::class, 'destroy']);
+Route::resource('/barang', BarangController::class);
 
 // SupplierController
-Route::get('/user/hapus/{id}', [SupplierController::class, 'destroy']);
-Route::resource('/user', SupplierController::class);
+Route::get('/supplier/hapus/{id}', [SupplierController::class, 'destroy']);
+Route::resource('/supplier', SupplierController::class);
 
-// MasterAkunController
+// AkunController
 Route::get('/akun/hapus/{id}', [AkunController::class, 'destroy']);
 Route::resource('/akun', AkunController::class);
 
 // SettingController
 Route::get('/setting', [SettingController::class, 'index'])->name('setting.transaksi');
-Route::post('/setting/simpan','SettingController@simpan');
+Route::post('/setting/simpan', [SettingController::class, 'simpan'])->name('setting.simpan');
